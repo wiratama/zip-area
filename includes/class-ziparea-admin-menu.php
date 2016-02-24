@@ -37,19 +37,19 @@ class Ziparea_Admin_Menu {
         switch ($action) {
             case 'view':
 
-                $template = dirname( __FILE__ ) . '/views/ziparea-single.php';
+                $template = dirname( __FILE__ ) . '/views/zip-single.php';
                 break;
 
             case 'edit':
-                $template = dirname( __FILE__ ) . '/views/ziparea-edit.php';
+                $template = dirname( __FILE__ ) . '/views/zip-edit.php';
                 break;
 
             case 'new':
-                $template = dirname( __FILE__ ) . '/views/ziparea-new.php';
+                $template = dirname( __FILE__ ) . '/views/zip-new.php';
                 break;
 
             default:
-                $template = dirname( __FILE__ ) . '/views/ziparea-list.php';
+                $template = dirname( __FILE__ ) . '/views/zip-list.php';
                 break;
         }
 

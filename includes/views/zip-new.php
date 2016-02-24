@@ -35,7 +35,11 @@
                     </th>
                     <td>
                         <select name="area_id" id="area_id" required="required">
-                            <option value=""><?php echo __( '', 'arwir' ); ?></option>
+                            <option value="">Select One</option>
+                            <option value="1">Jakarta Barat</option>
+                            <option value="2">Jakarta Selatan</option>
+                            <option value="3">Jakarta Pusat</option>
+                            <option value="4">Jakarta Utara</option>
                         </select>
                     </td>
                 </tr>

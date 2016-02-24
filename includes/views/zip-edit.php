@@ -37,14 +37,18 @@
                     </th>
                     <td>
                         <select name="area_id" id="area_id" required="required">
-                            <option value="" <?php selected( $item->area_id, '' ); ?>><?php echo __( '', 'arwir' ); ?></option>
+                            <option value="">Select One</option>
+                            <option value="1" <?php selected( $item->area_id, 1 ); ?>>Jakarta Barat</option>
+                            <option value="2" <?php selected( $item->area_id, 2 ); ?>>Jakarta Selatan</option>
+                            <option value="3" <?php selected( $item->area_id, 3 ); ?>>Jakarta Pusat</option>
+                            <option value="4" <?php selected( $item->area_id, 4 ); ?>>Jakarta Utara</option>
                         </select>
                     </td>
                 </tr>
              </tbody>
         </table>
 
-        <input type="hidden" name="field_id" value="<?php echo $item->id; ?>">
+        <input type="hidden" name="field_id" value="<?php echo $item->ID; ?>">
 
         <?php wp_nonce_field( 'zip-new' ); ?>
         <?php submit_button( __( 'Update', 'arwir' ), 'primary', 'submit_ziparea' ); ?>

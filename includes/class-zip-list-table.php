@@ -86,10 +86,10 @@ class Ziparea_List_Table extends \WP_List_Table {
     function column_street_name( $item ) {
 
         $actions           = array();
-        $actions['edit']   = sprintf( '<a href="%s" data-id="%d" title="%s">%s</a>', admin_url( 'admin.php?page=zip-area&action=edit&id=' . $item->id ), $item->id, __( 'Edit this item', 'arwir' ), __( 'Edit', 'arwir' ) );
-        $actions['delete'] = sprintf( '<a href="%s" class="submitdelete" data-id="%d" title="%s">%s</a>', admin_url( 'admin.php?page=zip-area&action=delete&id=' . $item->id ), $item->id, __( 'Delete this item', 'arwir' ), __( 'Delete', 'arwir' ) );
+        $actions['edit']   = sprintf( '<a href="%s" data-id="%d" title="%s">%s</a>', admin_url( 'admin.php?page=zip-area&action=edit&id=' . $item->ID ), $item->ID, __( 'Edit this item', 'arwir' ), __( 'Edit', 'arwir' ) );
+        $actions['delete'] = sprintf( '<a href="%s" class="submitdelete" data-id="%d" title="%s">%s</a>', admin_url( 'admin.php?page=zip-area&action=delete&id=' . $item->ID ), $item->ID, __( 'Delete this item', 'arwir' ), __( 'Delete', 'arwir' ) );
 
-        return sprintf( '<a href="%1$s"><strong>%2$s</strong></a> %3$s', admin_url( 'admin.php?page=zip-area&action=view&id=' . $item->id ), $item->street_name, $this->row_actions( $actions ) );
+        return sprintf( '<a href="%1$s"><strong>%2$s</strong></a> %3$s', admin_url( 'admin.php?page=zip-area&action=view&id=' . $item->ID ), $item->street_name, $this->row_actions( $actions ) );
     }
 
     /**
@@ -126,7 +126,7 @@ class Ziparea_List_Table extends \WP_List_Table {
      */
     function column_cb( $item ) {
         return sprintf(
-            '<input type="checkbox" name="zip_id[]" value="%d" />', $item->id
+            '<input type="checkbox" name="zip_id[]" value="%d" />', $item->ID
         );
     }
 
