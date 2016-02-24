@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2016 at 08:59 AM
+-- Generation Time: Feb 24, 2016 at 09:14 AM
 -- Server version: 5.5.39
 -- PHP Version: 5.4.31
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `palyja_z`;
 CREATE TABLE IF NOT EXISTS `palyja_z` (
-`z_id` int(11) NOT NULL,
+`ID` int(11) NOT NULL,
   `street_name` varchar(100) NOT NULL,
   `district` varchar(100) NOT NULL,
   `zip` varchar(5) NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `palyja_z` (
 -- Indexes for table `palyja_z`
 --
 ALTER TABLE `palyja_z`
- ADD PRIMARY KEY (`z_id`), ADD KEY `z_id` (`z_id`), ADD KEY `zip` (`zip`), ADD KEY `area_id` (`area_id`), ADD KEY `street_name` (`street_name`);
+ ADD PRIMARY KEY (`ID`), ADD KEY `z_id` (`ID`), ADD KEY `zip` (`zip`), ADD KEY `area_id` (`area_id`), ADD KEY `street_name` (`street_name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -53,7 +53,7 @@ ALTER TABLE `palyja_z`
 -- AUTO_INCREMENT for table `palyja_z`
 --
 ALTER TABLE `palyja_z`
-MODIFY `z_id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
