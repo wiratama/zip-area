@@ -51,6 +51,15 @@ class Ziparea_List_Table extends \WP_List_Table {
                 return $item->zip;
 
             case 'area_id':
+                if ($item->area_id=='1') {
+                    $item->area_id='Jakarta Barat';
+                } else if ($item->area_id=='2') {
+                    $item->area_id='Jakarta Selatan';
+                } else if ($item->area_id=='3') {
+                    $item->area_id='Jakarta Pusat';
+                } else if ($item->area_id=='4') {
+                    $item->area_id='Jakarta Utara';
+                }
                 return $item->area_id;
 
             default:
