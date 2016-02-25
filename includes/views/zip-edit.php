@@ -48,7 +48,7 @@
              </tbody>
         </table>
 
-        <input type="hidden" name="field_id" value="<?php echo $item->ID; ?>">
+        <input type="hidden" name="field_id" value="<?php echo $item->id; ?>">
 
         <?php wp_nonce_field( 'zip-new' ); ?>
         <?php submit_button( __( 'Update', 'arwir' ), 'primary', 'submit_ziparea' ); ?>
