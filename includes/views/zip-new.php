@@ -13,12 +13,20 @@
                         <input type="text" name="street_name" id="street_name" class="regular-text" placeholder="<?php echo esc_attr( '', 'arwir' ); ?>" value="" required="required" />
                     </td>
                 </tr>
-                <tr class="row-district">
+                <tr class="row-kecamatan">
                     <th scope="row">
-                        <label for="district"><?php _e( 'Kelurahan', 'arwir' ); ?></label>
+                        <label for="kecamatan"><?php _e( 'Kecamatan', 'arwir' ); ?></label>
                     </th>
                     <td>
-                        <input type="text" name="district" id="district" class="regular-text" placeholder="<?php echo esc_attr( '', 'arwir' ); ?>" value="" required="required" />
+                        <input type="text" name="kecamatan" id="kecamatan" class="regular-text" placeholder="<?php echo esc_attr( '', 'arwir' ); ?>" value="" required="required" />
+                    </td>
+                </tr>
+                <tr class="row-kelurahan">
+                    <th scope="row">
+                        <label for="kelurahan"><?php _e( 'Kelurahan', 'arwir' ); ?></label>
+                    </th>
+                    <td>
+                        <input type="text" name="kelurahan" id="kelurahan" class="regular-text" placeholder="<?php echo esc_attr( '', 'arwir' ); ?>" value="" required="required" />
                     </td>
                 </tr>
                 <tr class="row-zip">

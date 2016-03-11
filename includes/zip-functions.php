@@ -65,7 +65,8 @@ function ziparea_insert_zip( $args = array() ) {
     $defaults = array(
         'id'         => null,
         'street_name' => '',
-        'district' => '',
+        'kecamatan' => '',
+        'Kelurahan' => '',
         'zip' => '',
         'area_id' => '',
 
@@ -78,8 +79,11 @@ function ziparea_insert_zip( $args = array() ) {
     if ( empty( $args['street_name'] ) ) {
         return new WP_Error( 'no-street_name', __( 'No Nama Jalan provided.', 'arwir' ) );
     }
-    if ( empty( $args['district'] ) ) {
-        return new WP_Error( 'no-district', __( 'No Kelurahan provided.', 'arwir' ) );
+    if ( empty( $args['kecamatan'] ) ) {
+        return new WP_Error( 'no-kecamatan', __( 'No Kecamatan provided.', 'arwir' ) );
+    }
+    if ( empty( $args['kelurahan'] ) ) {
+        return new WP_Error( 'no-kelurahan', __( 'No Kelurahan provided.', 'arwir' ) );
     }
     if ( empty( $args['zip'] ) ) {
         return new WP_Error( 'no-zip', __( 'No Kode Pos provided.', 'arwir' ) );

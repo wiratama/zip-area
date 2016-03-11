@@ -44,8 +44,11 @@ class Ziparea_List_Table extends \WP_List_Table {
             case 'street_name':
                 return $item->street_name;
 
-            case 'district':
-                return $item->district;
+            case 'kecamatan':
+                return $item->kecamatan;
+
+            case 'kelurahan':
+                return $item->kelurahan;
 
             case 'zip':
                 return $item->zip;
@@ -76,7 +79,8 @@ class Ziparea_List_Table extends \WP_List_Table {
         $columns = array(
             'cb'           => '<input type="checkbox" />',
             'street_name'      => __( 'Nama Jalan', 'arwir' ),
-            'district'      => __( 'Kelurahan', 'arwir' ),
+            'kecamatan'      => __( 'Kecamatan', 'arwir' ),
+            'kelurahan'      => __( 'Kelurahan', 'arwir' ),
             'zip'      => __( 'Kode Pos', 'arwir' ),
             'area_id'      => __( 'Area', 'arwir' ),
 

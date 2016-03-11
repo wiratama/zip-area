@@ -38,7 +38,8 @@ class Form_Handler_Ziparea {
         $field_id = isset( $_POST['field_id'] ) ? intval( $_POST['field_id'] ) : 0;
 
         $street_name = isset( $_POST['street_name'] ) ? sanitize_text_field( $_POST['street_name'] ) : '';
-        $district = isset( $_POST['district'] ) ? sanitize_text_field( $_POST['district'] ) : '';
+        $kecamatan = isset( $_POST['kecamatan'] ) ? sanitize_text_field( $_POST['kecamatan'] ) : '';
+        $kelurahan = isset( $_POST['kelurahan'] ) ? sanitize_text_field( $_POST['kelurahan'] ) : '';
         $zip = isset( $_POST['zip'] ) ? sanitize_text_field( $_POST['zip'] ) : '';
         $area_id = isset( $_POST['area_id'] ) ? sanitize_text_field( $_POST['area_id'] ) : '';
 
@@ -47,7 +48,11 @@ class Form_Handler_Ziparea {
             $errors[] = __( 'Error: Nama Jalan is required', 'arwir' );
         }
 
-        if ( ! $district ) {
+        if ( ! $kecamatan ) {
+            $errors[] = __( 'Error: kecamatan is required', 'arwir' );
+        }
+
+        if ( ! $kelurahan ) {
             $errors[] = __( 'Error: Kelurahan is required', 'arwir' );
         }
 
@@ -69,7 +74,8 @@ class Form_Handler_Ziparea {
 
         $fields = array(
             'street_name' => $street_name,
-            'district' => $district,
+            'kecamatan' => $kecamatan,
+            'kelurahan' => $kelurahan,
             'zip' => $zip,
             'area_id' => $area_id,
         );
