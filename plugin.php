@@ -52,6 +52,7 @@ function get_all_street_ajax() {
     
     $kode_post=(isset($_POST['b_kode_post'])) ? sanitize_text_field($_POST['b_kode_post']) : sanitize_text_field($_POST['f_kode_post']);
     $street=(isset($_POST['b_street'])) ? sanitize_text_field($_POST['b_street']) : sanitize_text_field($_POST['f_street']);
+    $area=(isset($_POST['b_area'])) ? sanitize_text_field($_POST['b_area']) : sanitize_text_field($_POST['f_area']);
 
     if ( $street ) {
         $items = $wpdb->get_results( "SELECT DISTINCT street_name FROM " . $wpdb->prefix . "z WHERE zip = '".$kode_post."' AND street_name like '".$street."%'");
@@ -74,6 +75,6 @@ if (isset($_POST['b_kode_pos']) and isset($_POST['b_area'])) {
     do_action( 'wp_ajax_get_all_zip_ajax' );
 }
 
-if (isset($_POST['b_street']) and isset($_POST['b_kode_post'])) {
+if (isset($_POST['b_street']) and isset($_POST['b_kode_post']) and isset($_POST['b_area'])) {
 	do_action( 'wp_ajax_get_all_street_ajax' );
 }
