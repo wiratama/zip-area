@@ -25,9 +25,10 @@ function get_all_zip_ajax() {
     global $wpdb;
     
     $kode_pos=(isset($_POST['b_kode_pos'])) ? sanitize_text_field($_POST['b_kode_pos']) :sanitize_text_field($_POST['f_kode_pos']);
+    $area=(isset($_POST['b_area'])) ? sanitize_text_field($_POST['b_area']) :sanitize_text_field($_POST['f_area']);
 
     if ( $kode_pos ) {
-        $items = $wpdb->get_results( "SELECT DISTINCT kecamatan, kelurahan, zip FROM " . $wpdb->prefix . "z WHERE zip like '".$kode_pos."%'");
+        $items = $wpdb->get_results( "SELECT DISTINCT kecamatan, kelurahan, zip FROM " . $wpdb->prefix . "z WHERE zip like '".$kode_pos."%' and area_id='".$area."'");
     }
     $json=array();
     if(is_array($items) and $items) {
@@ -69,7 +70,7 @@ function get_all_street_ajax() {
     exit;
 }
 
-if (isset($_POST['b_kode_pos'])) {
+if (isset($_POST['b_kode_pos']) and isset($_POST['b_area'])) {
     do_action( 'wp_ajax_get_all_zip_ajax' );
 }
 
